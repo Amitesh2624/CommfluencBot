@@ -1,0 +1,71 @@
+1)(a) Relational Database is a model in which data is organised into rows and coloumns
+
+(b) Degree of table is 10 and cardinality is 7
+
+(c) create table Items (
+	Itemno int(3) PRIMARY KEY,
+	Iname varchar(15),
+	Price int(10),
+	Quantity int(3)
+);
+
+
+(d) drop table DEPARTMENT
+show DATABASES
+use DB1
+desc STUDENT
+
+2) (a) (i) select Name from STUDENT where Class like "12_" group by Stipend;
+(ii) select Name from STUDENT where Name like "R%" or "D%"
+(iii) select Name, Stipend, Stream, Stipend*12 from STUDENT 
+(iv) insert into STUDENT values(11,"Ruby", 500, "Medical", 95.0, "A", "12B")
+(v) update STUDENT set Stipend = 550.00 where Class like "12_" and Stipend = 400;
+(vi) delete from STUDENT where Stream = "Nonmedical";
+
+(b) (i) SELECT Tcode, Name, AName from TicketDetails, AgentDetails where TicketDetails.ACode = AgentDetails.Acode and Tickets > 5
+(ii) Select Cunt(Tickets) from TicketDetails, AgentDetauls where TIcketDetails.ACode = AgentDetails.ACode and AName like "Mr.Ayush";
+(iii) Select TCode, Name, AName from TicketDetails, AgentDetails where TicketDetails.ACode = AgentDetails.ACode and name like "%k";
+
+
+3) (a) Select * from CLUB where SPORTS = "Swimming";
+(b) Select * from CLUB where COACHNAME like "K%";
+(c) Select COACHNAME FROM CLUB ORDER BY NAME;
+(d) SELECT COACHNAME FROM CLUB ORDER BY DATEOFAPP DESC;
+(e) SELECT COACHNAME, AGE, GENDER FROM CLUB WHERE GENDER = "M";
+(f) SELECT * FROM CLUB WHERE AGE > 35 AND PAY BETWEEN 1500 AND 2000;
+(g) SELECT COACHNAME, PAY, AGE , 0..05*PAY AS BONUS FROM CLUB;
+(h) SELECT DISTINCT(SPORTS) FROM CLUB 
+(i) SELECT COUNT(COACHNAME) FROM CLUB
+(j) SELECT SPORTS, COUNT(COACHNAME) FROM CLUB GROUP BY SPORTS;
+(k) SELECT SPORTS, SUM(PAY) FROM CLUB GROUP BY SPORTS;
+(l) SELECT MAX(AGE), MIN(PAY) FROM CLUB;
+(m) 
+(i)
+
+COUNT(SPORTS)
+-------------
+4
+
+(ii)
+
+MIN(AGE)
+-------------
+34
+
+(iii)
+AVERAGE(PAY)
+-------------
+1100
+
+(iv)
+SUM(PAY)
+------------
+9300
+
+(v)
+SWIMMING
+SWIMMING
+
+(o) delete from CLUB where salary < 1000;
+(p) delete from CLUB where name like "_ _ _ _ N";
+(q) update CLUB set salary = 1.2*salary;
